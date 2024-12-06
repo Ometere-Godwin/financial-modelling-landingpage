@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart2 } from "lucide-react";
+import { ArrowRight, BarChart2, Ghost } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-900 pt-16 md:pt-20 lg:pt-24">
+    <section className="mt-20 relative overflow-hidden pt-16 md:pt-20 lg:pt-24 text-black">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16">
           <div className="relative z-10 md:text-center lg:text-left">
@@ -16,20 +16,25 @@ export function HeroSection() {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-emerald-800 sm:text-5xl md:text-6xl">
                 Financial Modeling{" "}
-                <span className="text-blue-500">Made Simple</span>
+                <span className="text-orange-600">Made Simple</span>
               </h1>
-              <p className="mt-6 text-lg text-slate-300">
+              <p className="mt-6 text-lg">
                 Transform your financial planning with our intuitive modeling
-                platform. Build professional financial models in minutes, not hours.
+                platform. Build professional financial models in minutes, not
+                hours.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button size="lg" className="group">
+                <Button
+                  size="lg"
+                  className="group border border-emerald-800 text-emerald-800"
+                  variant="ghost"
+                >
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="bg-emerald-800">
                   View Demo
                 </Button>
               </div>
@@ -50,7 +55,7 @@ export function HeroSection() {
                     />
                   ))}
                 </div>
-                <p className="text-sm text-slate-300">
+                <p className="text-sm text-emerald-800">
                   Trusted by 10,000+ financial professionals
                 </p>
               </div>

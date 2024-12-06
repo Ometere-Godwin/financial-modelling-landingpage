@@ -3,25 +3,30 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BarChart2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navigation = [
-  { name: "Features", href: "#features" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-slate-900/80 backdrop-blur">
+    <header className="fixed h-20 inset-x-0 top-0 z-50 bg-white backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex items-center gap-x-2">
           <Link href="/" className="flex items-center gap-x-2">
-            <BarChart2 className="h-8 w-8 text-blue-500" aria-hidden="true" />
-            <span className="text-xl font-bold text-white">FinModel</span>
+            <Image
+              src={"/finarchitechlogo.png"}
+              alt=""
+              width={300}
+              height={300}
+            />
           </Link>
         </div>
         <div className="hidden lg:flex lg:gap-x-8">
@@ -29,17 +34,22 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-slate-300 hover:text-white"
+              className="text-sm font-semibold leading-6 text-emerald-800"
             >
               {item.name}
             </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:gap-x-4">
-          <Button variant="ghost" className="text-slate-300 hover:text-white">
+          <Button
+            variant="ghost"
+            className="text-emerald-800 hover:text-white hover:bg-emerald-800"
+          >
             Log in
           </Button>
-          <Button>Sign up</Button>
+          <Button className="bg-emerald-800 hover:bg-white hover:text-emerald-800">
+            Sign up
+          </Button>
         </div>
         <button
           type="button"
@@ -67,9 +77,12 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-6 space-y-4">
-              <Button variant="ghost" className="w-full justify-center">
-                Log in
-              </Button>
+              <Link href={"/login"}>
+                <Button variant="ghost" className="w-full justify-center">
+                  Login
+                </Button>
+              </Link>
+
               <Button className="w-full justify-center">Sign up</Button>
             </div>
           </div>

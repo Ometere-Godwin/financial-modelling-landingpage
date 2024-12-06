@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { BarChart2, Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const navigation = {
   product: [
@@ -28,16 +29,28 @@ const navigation = {
     { name: "Security", href: "#security" },
   ],
   social: [
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "GitHub", href: "#", icon: Github },
+    { name: "Twitter", href: "https://x.com/Fin_architectt", icon: Twitter },
+    {
+      name: "Facebook",
+      href: "https://web.facebook.com/FinArchitectt",
+      icon: Facebook,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/finarchitect/",
+      icon: Linkedin,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/finarchitect.co/",
+      icon: Instagram,
+    },
   ],
 };
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900" aria-labelledby="footer-heading">
+    <footer className="bg-emerald-800" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -46,12 +59,17 @@ export function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-x-2">
               <div className="text-blue-500">
-                <BarChart2 className="h-8 w-8" />
+                <Image
+                  src={"/finarchitechlogo.png"}
+                  alt=""
+                  width={300}
+                  height={300}
+                />
               </div>
-              <span className="text-xl font-bold text-white">FinModel</span>
             </div>
             <p className="text-sm leading-6 text-slate-300">
-              Making financial modeling accessible and efficient for businesses of all sizes.
+              Making financial modeling accessible and efficient for businesses
+              of all sizes.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -69,7 +87,9 @@ export function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Product</h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">
+                  Product
+                </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.product.map((item) => (
                     <li key={item.name}>
@@ -84,7 +104,9 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">
+                  Company
+                </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -101,7 +123,9 @@ export function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Support</h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">
+                  Support
+                </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
@@ -116,7 +140,9 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+                <h3 className="text-sm font-semibold leading-6 text-white">
+                  Legal
+                </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
