@@ -64,6 +64,7 @@ export function Footer() {
                   alt=""
                   width={300}
                   height={300}
+                  className="text-white"
                 />
               </div>
             </div>
@@ -161,7 +162,7 @@ export function Footer() {
         </div>
         <div className="mt-16 border-t border-slate-800 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-slate-400">
-            &copy; {new Date().getFullYear()} FinModel. All rights reserved.
+            &copy; {new Date().getFullYear()} FinArchitect. All rights reserved.
           </p>
         </div>
       </div>

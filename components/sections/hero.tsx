@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart2, Ghost } from "lucide-react";
+import { Button } from "../ui/button";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -38,7 +39,7 @@ export function HeroSection() {
                   View Demo
                 </Button>
               </div>
-              <div className="mt-8 flex items-center gap-4 md:justify-center lg:justify-start">
+              {/* <div className="mt-8 flex items-center gap-4 md:justify-center lg:justify-start">
                 <div className="flex -space-x-2">
                   {[...Array(4)].map((_, i) => (
                     <div
@@ -58,7 +59,7 @@ export function HeroSection() {
                 <p className="text-sm text-emerald-800">
                   Trusted by 10,000+ financial professionals
                 </p>
-              </div>
+              </div> */}
             </motion.div>
           </div>
           <div className="relative lg:static xl:pl-10">
@@ -67,36 +68,16 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-800/80 shadow-xl backdrop-blur"
+                className="aspect-[4/3] overflow-hidden rounded-2xl  shadow-xl backdrop-blur"
               >
-                <div className="p-8">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <BarChart2 className="h-6 w-6 text-blue-500" />
-                      <h3 className="text-lg font-medium text-white">
-                        Financial Dashboard
-                      </h3>
-                    </div>
-                  </div>
-                  <div className="mt-8 grid gap-6">
-                    {[...Array(3)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="h-2 rounded bg-gradient-to-r from-blue-500/30 to-purple-500/30"
-                        style={{
-                          width: ["75%", "60%", "85%"][i],
-                        }}
-                      />
-                    ))}
-                  </div>
-                  <div className="mt-8 grid grid-cols-3 gap-4">
-                    {[...Array(6)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="h-20 rounded-lg bg-slate-700/50"
-                      />
-                    ))}
-                  </div>
+                <div className=" ">
+                  <Image
+                    src={"/finarch.png"}
+                    alt="finarch"
+                    width={700}
+                    height={700}
+                    className=" object-cover"
+                  />
                 </div>
               </motion.div>
             </div>

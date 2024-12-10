@@ -1,4 +1,4 @@
-import CompanySection from "@/components/sections/CompanySection";
+import CompanySection from "@/components/sections/companySection";
 import { CTASection } from "@/components/sections/cta";
 import { FeaturesSection } from "@/components/sections/features";
 import { HeroSection } from "@/components/sections/hero";

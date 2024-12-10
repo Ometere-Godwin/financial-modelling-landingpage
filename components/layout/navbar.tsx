@@ -2,19 +2,38 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+interface NavItem {
+  name: string;
+  href: string;
+}
+
+// const navigation: NavItem[] = [
+//   { name: "Home", href: "/" },
+//   { name: "Pricing", href: "/pricing" },
+//   { name: "About", href: "/about" },
+//   { name: "Contact", href: "/contact" },
+// ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigation: NavItem[] = [
+    { name: "Home", href: "/" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const getActiveClass = (href: string) =>
+    pathname === href
+      ? "text-emerald-800 border-b-2 border-emerald-800"
+      : "text-emerald-800";
 
   return (
     <header className="fixed h-20 inset-x-0 top-0 z-50 bg-white backdrop-blur">
@@ -36,20 +55,31 @@ export function Navbar() {
               href={item.href}
               className="text-sm font-semibold leading-6 text-emerald-800"
             >
-              {item.name}
+              <span
+                className={`py-2 px-4 ${getActiveClass(
+                  item.href
+                )} hover:text-emerald-500`}
+              >
+                {item.name}
+              </span>
             </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:gap-x-4">
-          <Button
-            variant="ghost"
-            className="text-emerald-800 hover:text-white hover:bg-emerald-800"
-          >
-            Log in
-          </Button>
-          <Button className="bg-emerald-800 hover:bg-white hover:text-emerald-800">
-            Sign up
-          </Button>
+          <Link href={"/login"}>
+            <Button
+              variant="ghost"
+              className="text-emerald-800 hover:text-white hover:bg-emerald-800"
+            >
+              Log in
+            </Button>
+          </Link>
+
+          <Link href={"/register"}>
+            <Button className="bg-emerald-800 hover:bg-white hover:text-emerald-800">
+              Sign up
+            </Button>
+          </Link>
         </div>
         <button
           type="button"
