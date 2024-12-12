@@ -36,7 +36,7 @@ export function Navbar() {
       : "text-emerald-800";
 
   return (
-    <header className="fixed h-20 inset-x-0 top-0 z-50 bg-white backdrop-blur">
+    <header className="fixed z-50 bg-white w-full top-0">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex items-center gap-x-2">
           <Link href="/" className="flex items-center gap-x-2">
@@ -58,7 +58,7 @@ export function Navbar() {
               <span
                 className={`py-2 px-4 ${getActiveClass(
                   item.href
-                )} hover:text-emerald-500`}
+                )} hover:text-orange-700`}
               >
                 {item.name}
               </span>
@@ -96,21 +96,19 @@ export function Navbar() {
       </nav>
       {mobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="space-y-1 px-6 pb-6">
+          <div className=" px-6 pb-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-base font-semibold text-slate-300 hover:text-white"
+                className="block p-2 text-[24px] font-semibold text-slate-300 hover:text-white bg-emerald-800"
               >
                 {item.name}
               </Link>
             ))}
             <div className="mt-6 space-y-4">
               <Link href={"/login"}>
-                <Button variant="ghost" className="w-full justify-center">
-                  Login
-                </Button>
+                <Button className="w-full justify-center">Login</Button>
               </Link>
 
               <Button className="w-full justify-center">Sign up</Button>

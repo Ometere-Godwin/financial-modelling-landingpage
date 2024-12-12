@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FinModel - Financial Modeling Made Simple",
+  title: "Fin Architect - Financial Modeling Made Simple",
   description: "Professional financial modeling platform for modern businesses",
 };
 

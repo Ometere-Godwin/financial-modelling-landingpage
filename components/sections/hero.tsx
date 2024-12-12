@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Ghost } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="mt-20 relative overflow-hidden pt-16 md:pt-20 lg:pt-24 text-black">
+    <section className="my-32 relative overflow-hidden pt-16 md:pt-20 lg:pt-24 text-black">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16">
           <div className="relative z-10 md:text-center lg:text-left">
@@ -68,15 +68,15 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="aspect-[4/3] overflow-hidden rounded-2xl  shadow-xl backdrop-blur"
+                className="aspect-[4/3] overflow-hidden rounded-2xl shadow-xl"
               >
-                <div className=" ">
+                <div className="w-full items-center flex">
                   <Image
                     src={"/finarch.png"}
                     alt="finarch"
                     width={700}
                     height={700}
-                    className=" object-cover"
+                    className="aspect-[4/3]"
                   />
                 </div>
               </motion.div>

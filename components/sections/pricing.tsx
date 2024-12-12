@@ -50,7 +50,7 @@ const plans = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className=" py-24 sm:py-32">
+    <section id="pricing" className=" py-24 sm:py-0 mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <motion.div
@@ -86,7 +86,7 @@ export function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="rounded-full bg-emerald-300 px-4 py-1 text-sm font-semibold text-white">
+                  <div className="rounded-full bg-orange-700 px-4 py-1 text-sm font-semibold text-white">
                     Most Popular
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export function PricingSection() {
                 className={`w-full ${
                   plan.popular
                     ? "bg-white text-emerald-800 hover:bg-slate-100"
-                    : "bg-emerald-800 text-white hover:bg-emerald-500"
+                    : "bg-emerald-800 text-white hover:bg-orange-700"
                 }`}
               >
                 Get Started

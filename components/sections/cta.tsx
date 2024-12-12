@@ -30,7 +30,7 @@ export function CTASection() {
               Get Started
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="hover:bg-orange-700">
               Contact Sales
             </Button>
           </div>

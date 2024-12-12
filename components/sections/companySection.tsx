@@ -48,10 +48,10 @@ const doubledCompanies = [...companies, ...companies];
 
 export default function CompanySection() {
   return (
-    <section className="py-12 overflow-hidden text-gray-500 bg-emerald-800">
+    <section className="py-12 overflow-hidden text-gray-500 bg-emerald-800 mt-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-xl font-semibold text-black">
+          <h2 className="text-xl font-semibold text-white">
             Trusted by leading financial institutions worldwide
           </h2>
         </div>
@@ -68,7 +68,7 @@ export default function CompanySection() {
                 ease: "linear",
               },
             }}
-            className="flex gap-x-16 whitespace-nowrap text-black"
+            className="flex gap-x-16 whitespace-nowrap text-white"
           >
             {doubledCompanies.map((company, index) => (
               <div
