@@ -43,7 +43,7 @@ export function RegisterForm() {
     event.preventDefault();
     // Add your signup logic here
     console.log("Sign up data:", formData);
-    <Link href={"/login"} />;
+    <Link href={"https://finarchitect.netlify.app/login"} />;
   };
 
   return (

@@ -137,7 +137,7 @@ export default function page() {
             <div>
               <Button
                 type="submit"
-                className="w-full bg-emerald-800 hover:bg-emerald-900 text-white"
+                className="w-full bg-emerald-800 hover:bg-orange-700 text-white"
               >
                 Send Message
               </Button>

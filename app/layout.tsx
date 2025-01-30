@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Fin Architect - Financial Modeling Made Simple",
   description: "Professional financial modeling platform for modern businesses",
+  icons: "fin_icon.jpeg",
 };
 
 export default function RootLayout({

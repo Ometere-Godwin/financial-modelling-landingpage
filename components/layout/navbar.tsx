@@ -66,7 +66,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:gap-x-4">
-          <Link href={"/login"}>
+          <Link href={"https://finarchitect.netlify.app/login"} target="_blank">
             <Button
               variant="ghost"
               className="text-emerald-800 hover:text-white hover:bg-emerald-800"
@@ -107,7 +107,7 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-6 space-y-4">
-              <Link href={"/login"}>
+              <Link href={"https://finarchitect.netlify.app/login"}>
                 <Button className="w-full justify-center">Login</Button>
               </Link>
 

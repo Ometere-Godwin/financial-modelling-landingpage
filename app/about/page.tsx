@@ -122,7 +122,7 @@ export default function page() {
             <div className="mt-10">
               <Button
                 size="lg"
-                className="bg-emerald-800 hover:bg-emerald-900 text-white"
+                className="bg-emerald-800 hover:bg-orange-700 text-white"
               >
                 View Open Positions
                 <ArrowRight className="ml-2 h-4 w-4" />

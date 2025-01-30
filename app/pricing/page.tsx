@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const plans = [
   {
@@ -86,7 +87,7 @@ export default function page() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="rounded-full bg-emerald-300 px-4 py-1 text-sm font-semibold text-white">
+                  <div className="rounded-full bg-orange-700 px-4 py-1 text-sm font-semibold text-white">
                     Most Popular
                   </div>
                 </div>
@@ -117,16 +118,24 @@ export default function page() {
                   </li>
                 ))}
               </ul>
-              <Button
-                size="lg"
-                className={`w-full ${
-                  plan.popular
-                    ? "bg-white text-emerald-800 hover:bg-slate-100"
-                    : "bg-emerald-800 text-white hover:bg-emerald-500"
-                }`}
+              <Link
+                href={{
+                  pathname: "/login",
+                  query: { plan: plan.name.toLowerCase() },
+                }}
+                className="w-full"
               >
-                Get Started
-              </Button>
+                <Button
+                  size="lg"
+                  className={`w-full ${
+                    plan.popular
+                      ? "bg-white text-emerald-800 hover:bg-slate-100"
+                      : "bg-emerald-800 text-white hover:bg-orange-700"
+                  }`}
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           ))}
         </motion.div>

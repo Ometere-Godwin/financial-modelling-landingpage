@@ -7,10 +7,10 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "49",
+    price: "49.99",
     description: "Perfect for individuals and small teams",
     features: [
-      "5 Financial Models",
+      "1 Financial Model",
       "Basic Analytics",
       "Email Support",
       "1 Team Member",
@@ -19,10 +19,10 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "99",
+    price: "129.99",
     description: "Ideal for growing businesses",
     features: [
-      "Unlimited Financial Models",
+      "5 Financial Models",
       "Advanced Analytics",
       "Priority Support",
       "5 Team Members",
@@ -34,7 +34,7 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "299",
+    price: "129.99",
     description: "For large organizations",
     features: [
       "Everything in Professional",
@@ -96,7 +96,7 @@ export function PricingSection() {
                 <p className="mt-2 ">{plan.description}</p>
                 <div className="mt-6">
                   <span className="text-4xl font-bold">${plan.price}</span>
-                  <span className="">/month</span>
+                  <span className="">/year</span>
                 </div>
               </div>
               <ul className="mb-8 space-y-4 flex-1">
